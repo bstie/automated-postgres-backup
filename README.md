@@ -22,8 +22,8 @@ chown postgres:deploy /home/deploy/postgres-backups
 
 ```
 
+Add password for postgres and add .pgpass if not already done
 ```bash
-# add password for postgres and add .pgpass if not already done
 su - postgres
 psql
 
