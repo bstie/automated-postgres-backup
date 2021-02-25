@@ -28,9 +28,8 @@ wget https://raw.githubusercontent.com/bstie/automated-postgres-backup/master/sr
 chmod +x pg_backup.sh pg_backup_rotated.sh
 # create destination folder
 mkdir /home/deploy/postgres-backups
-# set owner "postgres" and owner group "deploy", so that postgres 
-# and deploy user can read/write in this directory.
-chown postgres:deploy /home/deploy/postgres-backups
+# set owner to the user that will execute the backup script
+chown deploy:deploy /home/deploy/postgres-backups
 ```
 
 Add password for postgres and add .pgpass if not already done
